@@ -28,3 +28,6 @@ gem 'redcarpet'
 
 # Code coloring
 gem 'pygments.rb'
+
+# New Relic
+gem 'newrelic_rpm'

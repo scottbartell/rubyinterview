@@ -63,6 +63,7 @@ GEM
     mime-types (1.23)
     minitest (4.7.3)
     multi_json (1.7.2)
+    newrelic_rpm (3.6.0.83)
     pg (0.15.1)
     polyglot (0.3.3)
     posix-spawn (0.3.6)
@@ -137,6 +138,7 @@ DEPENDENCIES
   debugger
   jbuilder (~> 1.0.1)
   jquery-rails
+  newrelic_rpm
   pg
   pygments.rb
   rails (= 4.0.0.beta1)
