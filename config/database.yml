@@ -1,0 +1,21 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  port: 5432
+  username: postgres
+  password: postgres
+  template: template0
+
+development:
+  <<: *defaults
+  database: rinterview_development
+
+production:
+  <<: *defaults
+  database: rinterview_production
+
+test:
+  <<: *defaults
+  database: rinterview_test
