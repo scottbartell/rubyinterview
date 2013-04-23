@@ -1,0 +1,18 @@
+// CSS Reset
+@import "components/normalize";
+
+// Globals
+@import "globals/variables";
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Neuton', serif;
+  color: #555;
+  font-size: 18px;
+}
+
+// Components
+@import "components/syntax";
