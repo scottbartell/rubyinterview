@@ -3,15 +3,37 @@
 
 // Globals
 @import "globals/variables";
+@import "globals/mixins";
 
 html {
   -webkit-font-smoothing: antialiased;
+  font-size: 16px;
 }
 
 body {
-  font-family: 'Neuton', serif;
-  color: #555;
-  font-size: 18px;
+  font-family: $serif-font;
+  color: $text-color;
+  font-size: 62.5%; /* 1em = 10px */
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  @include transition(color 0.1s ease-in-out);
+
+  &:hover {
+    color: $link-color-hover;
+    border-bottom: 1px solid $link-color-hover;
+  }
+}
+
+.container {
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  padding-right: $container-gutter-width;
+  padding-left: $container-gutter-width;
+  @include clearfix();
 }
 
 // Components

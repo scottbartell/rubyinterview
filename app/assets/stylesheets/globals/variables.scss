@@ -1,2 +1,22 @@
-$mono: 'Inconsolata', Monaco, Courier, monospace;
-$code-border-color: #efefef;
+// Colors
+$gray: #555;
+$gray-lighter: lighten(#555555, 59);
+$orange: #FF6600;
+
+// Layout
+$container-gutter-width: 20px;
+
+// Scaffolding
+$base-font-size: 16px;
+$base-line-height: 25px;
+$serif-font: 'Neuton', serif;
+$mono-font: 'Inconsolata', Monaco, Courier, monospace;
+$text-color: $gray;
+
+
+// Links
+$link-color: $orange;
+$link-color-hover: darken($link-color, 15%);
+
+// Code
+$code-border-color: $gray-lighter;
