@@ -1,0 +1,15 @@
+<section id="quiz">
+  <header>
+    Ruby Quiz
+  </header>
+  <div class="question">
+    <%= raw @question.content_html %>
+  </div>
+  <%= button_tag 'Get Answer', type: 'button' %>
+  <div class="answer" style="display:none">
+    <%= raw @question.answer_html %>
+  </div>
+  <footer>
+    <%= link_to 'Next Question', '#'%>
+  </footer>
+</section>
