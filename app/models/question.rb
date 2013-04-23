@@ -4,8 +4,13 @@ class Question < ActiveRecord::Base
 
   validates_presence_of :category, :content, :answer
 
+  def self.random
+    random_offset = rand(count)
+    offset(random_offset).first
+  end
+
   private
-  
+
   def render_html
     options = {
       no_intra_emphasis: true,
