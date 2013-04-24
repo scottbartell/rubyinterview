@@ -1,6 +1,7 @@
 // Colors
 $gray: #555;
-$gray-lighter: lighten(#555555, 59);
+$gray-light: lighten($gray, 35);
+$gray-lighter: lighten($gray, 59);
 $red: #FF0000;
 
 // Layout

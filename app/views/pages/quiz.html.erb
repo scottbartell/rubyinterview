@@ -1,12 +1,21 @@
-<section id="quiz">
-  <header>
-    <h1>Ruby Quiz</h1>
-  </header>
-
-  <%= render 'question' %>
-
-  <%= button_tag 'Show the Answer', type: 'button', id: 'showAnswer' %>
-  <div class="footer">
-    <%= link_to 'Next Question', root_path, id: 'nextQuestion', remote: true, :"data-type" => "json" %>
-  </div>
+<section id="quiz" class="flip-container slideIn">
+  <div class="wrap flipper">
+    <div class="front">
+      <header>
+        <h1>Ruby Quiz</h1>
+      </header>
+      <div class="question">
+        <%= raw @question.content_html %>
+      </div>
+      <%= button_tag 'Show the Answer', type: 'button', id: 'showAnswer' %>
+    </div>
+    <div class="back">
+      <div class="answer">
+        <%= raw @question.answer_html %>
+      </div>
+      <div class="footer">
+        <%= link_to 'Next Question', root_path, id: 'nextQuestion', class: 'btn', remote: true, :"data-type" => "json" %>
+      </div>
+    </div>
+  </wrap>
 </section>
