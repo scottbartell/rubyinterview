@@ -2,8 +2,9 @@
 @import "components/normalize";
 
 // Globals
-@import "globals/variables";
+@import "bourbon";
 @import "globals/mixins";
+@import "globals/variables";
 
 html {
   -webkit-font-smoothing: antialiased;
@@ -35,6 +36,9 @@ a {
   padding-left: $container-gutter-width;
   @include clearfix();
 }
+
+// Sections
+@import "sections/quiz";
 
 // Components
 @import "components/syntax";

@@ -1,47 +1,4 @@
-@mixin clearfix {
-  *zoom: 1;
-  &:before,
-  &:after {
-    display: table;
-    content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
-    line-height: 0;
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
-}
-
-@mixin box-shadow($shadow...) {
-  -webkit-box-shadow: $shadow;
-     -moz-box-shadow: $shadow;
-          box-shadow: $shadow;
-}
-
-@mixin transition($transition...) {
-  -webkit-transition: $transition;
-     -moz-transition: $transition;
-       -o-transition: $transition;
-          transition: $transition;
-}
-
-@mixin user-select($select) {
-  -webkit-user-select: $select;
-     -moz-user-select: $select;
-      -ms-user-select: $select;
-       -o-user-select: $select;
-          user-select: $select;
-}
-
 @mixin opacity($opacity) {
   opacity: $opacity / 100;
   filter: alpha(opacity=$opacity);
 }
-

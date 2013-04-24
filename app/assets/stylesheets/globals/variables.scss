@@ -1,21 +1,21 @@
 // Colors
 $gray: #555;
 $gray-lighter: lighten(#555555, 59);
-$orange: #FF6600;
+$red: #FF0000;
 
 // Layout
 $container-gutter-width: 20px;
 
 // Scaffolding
-$base-font-size: 16px;
-$base-line-height: 25px;
+$base-font-size: 2em;
+$base-line-height: 1.428em;
 $serif-font: 'Neuton', serif;
 $mono-font: 'Inconsolata', Monaco, Courier, monospace;
 $text-color: $gray;
 
 
 // Links
-$link-color: $orange;
+$link-color: $red;
 $link-color-hover: darken($link-color, 15%);
 
 // Code

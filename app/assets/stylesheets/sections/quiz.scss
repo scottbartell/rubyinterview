@@ -1,3 +1,30 @@
 #quiz{
-  
+  width: 500px;
+  margin: 40px auto 0;
+  padding: 20px;
+  @include box-shadow(0px 0px 5px $gray);
+  @include animation(fadeIn 1.5s ease-in-out);
+
+
+  header{
+    text-align: center;
+  }
+}
+
+@include keyframes(fadeIn) {
+  from {
+    @include opacity(0);
+  }
+  to {
+    @include opacity(100);
+  }
+}
+
+@include keyframes(fadeOut) {
+  from {
+    @include opacity(100);
+  }
+  to {
+    @include opacity(0);
+  }
 }
