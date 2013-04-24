@@ -1,15 +1,12 @@
 <section id="quiz">
   <header>
-    Ruby Quiz
+    <h1>Ruby Quiz</h1>
   </header>
-  <div class="question">
-    <%= raw @question.content_html %>
+  <div id="question">
+    <%= render 'question' %>
   </div>
-  <%= button_tag 'Get Answer', type: 'button' %>
-  <div class="answer" style="display:none">
-    <%= raw @question.answer_html %>
+  <%= button_tag 'Show the Answer', type: 'button', id: 'showAnswer' %>
+  <div class="footer">
+    <%= link_to 'Next Question', root_path, id: 'nextQuestion', remote: true, :"data-type" => "json" %>
   </div>
-  <footer>
-    <%= link_to 'Next Question', '#'%>
-  </footer>
 </section>
