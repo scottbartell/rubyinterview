@@ -2,9 +2,9 @@
   <header>
     <h1>Ruby Quiz</h1>
   </header>
-  <div id="question">
-    <%= render 'question' %>
-  </div>
+
+  <%= render 'question' %>
+
   <%= button_tag 'Show the Answer', type: 'button', id: 'showAnswer' %>
   <div class="footer">
     <%= link_to 'Next Question', root_path, id: 'nextQuestion', remote: true, :"data-type" => "json" %>

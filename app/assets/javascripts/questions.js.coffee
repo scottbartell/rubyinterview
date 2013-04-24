@@ -5,7 +5,8 @@ ready = ->
       $(this).siblings('.answer').fadeIn()
   $("#nextQuestion").bind "ajax:success", (evt, data, status, xhr) ->
     quiz.fadeOut 'fast', ->
-      quiz.find('.answer').html(data.question.answer_html)
+      quiz.find('button#showAnswer').show()
+      quiz.find('.answer').hide().html(data.question.answer_html)
       quiz.find('.question').html(data.question.content_html)
       quiz.fadeIn 'fast'
 
