@@ -39,6 +39,21 @@ a {
   @include clearfix();
 }
 
+footer {
+  font-size: .85em;
+  margin-top: 100px;
+
+  p {
+    opacity: 0.4;
+    text-align: center;
+    @include transition(opacity 0.4s);
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+
 // Sections
 @import "sections/quiz";
 
