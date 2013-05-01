@@ -13,3 +13,4 @@ Run the following commands:
     $ cd rubyinterview.com
     $ bundle install
     $ rake db:setup
+    $ rails server
