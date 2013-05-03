@@ -8,6 +8,7 @@ ready = ->
       quiz.removeClass('flip').removeClass('slideOut')
       quiz.find('.answer').html(data.question.answer_html)
       quiz.find('.question').html(data.question.content_html)
+      _gauges.push(['track']);
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
