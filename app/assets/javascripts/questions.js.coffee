@@ -3,7 +3,7 @@ ready = ->
   quiz.on 'click', 'button#showAnswer', (event) ->
     quiz.addClass('flip')
   $("#nextQuestion").on "ajax:success", (evt, data, status, xhr) ->
-    _gauges.push(['track']);
+    ga('send', 'pageview');
     quiz.addClass('slideOut')
     quiz.on "animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd", (event) ->
       quiz.removeClass('flip').removeClass('slideOut')
