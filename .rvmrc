@@ -1,0 +1,3 @@
+echo "Switching gemset to plated"
+rvm_gemset_create_on_use_flag=1
+rvm gemset use ruby-2.0.0-p353@ruby-interview
