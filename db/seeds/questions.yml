@@ -1,0 +1,1755 @@
+questions:
+  - :content: What are the only two values that are falsy?
+    :answer: "`false` and `nil`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: 'True or False: Ruby uses short-circuit evaluation for boolean operators.'
+    :answer: True.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby whitespace-dependent?
+    :answer: Sometimes.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is the highest level in the object model in Ruby 1.9+?
+    :answer: "`BasicObject`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is everything in Ruby an object?
+    :answer: No. Methods are not objects. Blocks are not objects. Keywords are not objects.
+      However, there exist Method objects and Proc objects, and some keywords refer
+      to objects.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Which core object includes the `Kernel` module?
+    :answer: "`Object`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: What can you say for sure about an identifier that begins with a capital
+      letter?
+    :answer: It is a constant.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What does DSL stand for and why does it come up when describing Ruby?
+    :answer: A Domain Specific Language is an API that allows you to solve a problem
+      or represent data more naturally than you could otherwise. The flexible nature
+      of Ruby's syntax and the ability to alias and alter existing methods and classes
+      makes it conducive to creating DSL's.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is duck typing and how does it apply to Ruby?
+    :answer: That an object may be acted upon even if it isn't the expected type as
+      long as it looks and behaves like the expected object. This is a characteristic
+      of Ruby because the lack of type checking of parameters makes this an effective
+      programming technique.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby a statically typed or a dynamically typed language?
+    :answer: Dynamically typed since type checking is done at runtime.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby a strongly typed or a weakly typed language?
+    :answer: Strongly typed since an object's type is checked before an operation is
+      performed on it.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What does it mean to coerce an object? Why would you do it?
+    :answer: To coerce the object into an expected type. You might do this in order
+      to try and force an unknown object type into the expected type or format required
+      by the operation.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is the difference between a statement and an expression in Ruby?
+    :answer: All statements are expressions in Ruby since all statements return a value.
+      A statement is simply a way to refer to a certain type of syntax.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What module would need to use for cryptographically secure random numbers?
+    :answer: "`SecureRandom`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: Where does scope change in a Ruby program?
+    :answer: At `module`, `class`, and `def`.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Are strings mutable?
+    :answer: Yes.
+    :category_name: 'Data Types: String'
+  - :content: What is the output of the expression `"hello"[-1]` ?
+    :answer: '`"o"`'
+    :category_name: 'Data Types: String'
+  - :content: What does `String#chomp` do?
+    :answer: Removes a line terminator.
+    :category_name: 'Data Types: String'
+  - :content: What does `String#chop` do?
+    :answer: Removes the trailing character or line terminator.
+    :category_name: 'Data Types: String'
+  - :content: Why might you want to avoid using string literals within loops?
+    :answer: A new object is created for every string literal even when the values are
+      identical.
+    :category_name: 'Data Types: String'
+  - :content: Is a `String` object enumerable in Ruby 1.9+?
+    :answer: No.
+    :category_name: 'Data Types: String'
+  - :content: What method might you use to enumerate over a `String` in Ruby 1.9+?
+    :answer: "`#each_char`"
+    :category_name: 'Data Types: String'
+  - :content: What is the difference between a character literal such as `?A` and a
+      string literal such as `"A"`?
+    :answer: There is no difference in Ruby 1.9+.
+    :category_name: 'Data Types: String'
+  - :content: What is a symbol?
+    :answer: Symbols are scalar value objects used as identifiers, mapping immutable
+      strings to fixed internal values.
+    :category_name: 'Data Types: Symbol'
+  - :content: What are two uses of the splat operator?
+    :answer: Explode/expand the elements of an array. Collect arguments of a parameter
+      list into an array.
+    :category_name: Operators
+  - :content: Why are symbols typically used as hash keys instead of strings?
+    :answer: Strings are mutable while symbols are immutable. Though Ruby internally
+      makes an immutable copy of a string when used as a hash key, comparing two symbols
+      is faster than comparing two `String` objects. This is also a convention.
+    :category_name: 'Data Types: Symbol'
+  - :content: What can't you do to instantiations of `Symbol` and `Fixnum` that you
+      can do to all other instances of core Ruby objects?
+    :answer: Define singleton methods on them.
+    :category_name: 'Data Types: Symbol'
+  - :content: 'True or False: It''s possible to initialize a symbol with `Symbol.new`?'
+    :answer: 'False'
+    :category_name: 'Data Types: Symbol'
+  - :content: Are `Numeric` objects mutable?
+    :answer: No.
+    :category_name: 'Data Types: Numeric'
+  - :content: Symbols are immutable objects. Name another immutable core Ruby object.
+    :answer: "`Fixnum`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What happens when a value is too big for `Fixnum`?
+    :answer: It is automatically converted to a `Bignum`.
+    :category_name: 'Data Types: Numeric'
+  - :content: The superclass of `Fixnum` is __.
+    :answer: "`Integer`"
+    :category_name: 'Data Types: Numeric'
+  - :content: The superclass of `Integer` is __.
+    :answer: "`Numeric`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What numeric class might you use to avoid the rounding error inherent
+      in the use of binary floating-point arithmetic?
+    :answer: "`BigDecimal`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What method might you use to remove duplicate values from an array?
+    :answer: "`#uniq`"
+    :category_name: 'Data Types: Array'
+  - :content: What is the %w syntax used for?
+    :answer: "It is a shortcut for array of strings\n```ruby\n a = %w(superman batman)
+      #=> [\"superman\", \"batman\"]\n```\n   "
+    :category_name: 'Data Types: Array'
+  - :content: What does `%W` allow for?
+    :answer: With `%W` it is possible to define an array containing string interpolation.
+    :category_name: 'Data Types: Array'
+  - :content: 'True or False: `a, b = [''foo'', ''bar'']` #=> `a = ''foo'', b = ''bar''`'
+    :answer: 'True'
+    :category_name: 'Data Types: Array'
+  - :content: 'True or False: This will throw an exception `a, b = 1, 2, 3, 4`'
+    :answer: 'False '
+    :category_name: 'Data Types: Array'
+  - :content: Name one synonym for `#key?`?
+    :answer: "`#has_key?`, `#include?`, `#member?`"
+    :category_name: 'Data Types: Hash'
+  - :content: How do you specify a default value for a hash?
+    :answer: Pass the default values as an argument to `#new` on initialization or change
+      the default directly with the setter method `Hash#default`. You may also provide
+      a default at time of query using `#fetch`.
+    :category_name: 'Data Types: Hash'
+  - :content: Does `Hash` use `#==` or `#eql?` to compare hash keys?
+    :answer: "`#eql?`"
+    :category_name: 'Data Types: Hash'
+  - :content: In what order are the values of a hash iteration in Ruby 1.9+?
+    :answer: The order in which they were inserted.
+    :category_name: 'Data Types: Hash'
+  - :content: What is the synonym of `Hash#store`?
+    :answer: "`Hash#[]=`"
+    :category_name: 'Data Types: Hash'
+  - :content: Why can you safely use a `String` as a hash key, even though a string
+      is a mutable object?
+    :answer: Because Ruby makes a private copy of a string used as a hash key.
+    :category_name: 'Data Types: Hash'
+  - :content: Why might you want to use `Hash#fetch` over `Hash#[]` when querying values
+      in a hash?
+    :answer: It provides options for handling the case where a key does not exist in
+      the hash.
+    :category_name: 'Data Types: Hash'
+  - :content: When would you need to use `Hash#rehash`?
+    :answer: After you mutate a mutable hash key.
+    :category_name: 'Data Types: Hash'
+  - :content: What are two uses of ranges?
+    :answer: comparison, iteration
+    :category_name: 'Data Types: Range'
+  - :content: How might you include an expression within a `Regexp` literal?
+    :answer: Using `` just like as in a double-quoted string literal.
+    :category_name: 'Data Types: Regexp'
+  - :content: What is the global variable for the last `Regexp` match?
+    :answer: "`$LAST_MATCH_INFO` equivalent to `$~`"
+    :category_name: 'Data Types: Regexp'
+  - :content: What does the `%r` syntax allow and why is it useful?
+    :answer: It creates a `Regexp` object, in which you don't need to escape /
+    :category_name: 'Data Types: Regexp'
+  - :content: What is the output of the expression `"hello"[-1]` ?
+    :answer: '`"o"`'
+    :category_name: 'Data Types: String'
+  - :content: What is the only operator that operates on three operands?
+    :answer: The conditional operator `?:` (sometimes referred to as the ternary if
+      operator).
+    :category_name: Operators
+  - :content: Which operator must be defined in order to implement the `Comparable`
+      module?
+    :answer: "`<=>`"
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#equal?`?
+    :answer: "`#==` performs the generic comparison and is implemented differently across
+      classes while `#equal?` is defined on `BasicObject` and compares object identity.
+      Therefore, `#equal?` should not be overridden in subclasses."
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#===`?
+    :answer: "`#==` performs the generic comparison while `#===` performs case equality
+      comparison and is useful for providing meaningful semantics in case statements."
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#eql?`?
+    :answer: "`#eql?` is sometimes an alternate equality. `Hash` uses `#eql?` to test
+      for hash key equality. `Numeric` types perform type conversion across `#==` but
+      not across `#eql?`, thus `#eql?` performs a stricter comparison than `#==` in
+      that case."
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `and`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `=`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `and` or `=`
+    :answer: "`=`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `||`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: What is the arity of an operator?
+    :answer: The number of values the operator performs on.
+    :category_name: Operators
+  - :content: What is a statement modifier?
+    :answer: A condition after a statement such as with `x = 1 if a == true`
+    :category_name: Control Structures
+  - :content: Does a while block define it's own variable scope?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: Does a case statement have fall-through behavior?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: What is the difference between `throw/catch` and `raise/rescue`?
+    :answer: "`throw` and `catch` accept matching symbols as arguments and should be
+      considered a control-flow structure where `raise` and `rescue` is used to raise
+      and handle exceptions. `throw` and `catch` are not commonly used while exception
+      handling with `raise` and `rescue` is used often - a `rescue` clause is a fundamental
+      part of the Ruby language."
+    :category_name: Control Structures
+  - :content: Does a `rescue` block define it's own variable scope?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: What are some advantages of a case statement versus repeated `elsif` statements?
+    :answer: It shows intent. It DRY's out the condition.
+    :category_name: Control Structures
+  - :content: What are some disadvantages of a case statement versus repeated `elsif`
+      statements?
+    :answer: The statement is typically resistant to modification without a complete
+      refactoring of the entire control structure. The case statement can be confusing
+      if multiple comma-separated expressions are associated with a single when clause.
+    :category_name: Control Structures
+  - :content: Name three methods of the `Enumerable` module.
+    :answer: "`#each`, `#map`, `#select`, `#find`, `#inject`..."
+    :category_name: Blocks and Iterators
+  - :content: Name two `Enumerable` classes (classes which mix in the `Enumerable` module).
+    :answer: "`Array`, `Hash`, `Set`, `Range`, `IO`..."
+    :category_name: Blocks and Iterators
+  - :content: When might you explicitly use the `return` statement.
+    :answer: To return from a method prematurely or to return multiple values.
+    :category_name: Methods
+  - :content: Why might you want to alias a method?
+    :answer: To create a synonym for the method that is more readable or appropriate
+      for the context of some problems. To add functionality to a method.
+    :category_name: Methods
+  - :content: When might you use the `do`/`end` syntax versus using the curly bracket
+      syntax for a block?
+    :answer: The `do`/`end` syntax for a block is commonly used for multi-line statements.
+      An alternate convention is to use curly bracket syntax for blocks that return
+      a value while using `do`/`end` syntax for blocks that change the state of the
+      system somehow and do not return a value.
+    :category_name: Blocks and Iterators
+  - :content: What is an iterator?
+    :answer: An object that allows traversal of the elements of the container. In Ruby,
+      an iterator is any method that uses the yield statement.
+    :category_name: Blocks and Iterators
+  - :content: How do you define block-local variables in a block's parameter list?
+    :answer: Variables that appear after a semicolon in a block's parameter list are
+      guaranteed to be local to the block.
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#include?`?
+    :answer: "`#member?`"
+    :category_name: Blocks and Iterators
+  - :content: Can a collection be modified while it is being iterated upon?
+    :answer: Yes.
+    :category_name: Blocks and Iterators
+  - :content: Is a block an object?
+    :answer: No. A block is a syntactic structure of the interpreter. However, a block
+      can be converted to a Proc object.
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#collect`?
+    :answer: "`#map`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#find`?
+    :answer: "`#detect`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#select`?
+    :answer: "`#find_all`"
+    :category_name: Blocks and Iterators
+  - :content: What is the opposite of `#select`?
+    :answer: "`#reject`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#inject`?
+    :answer: "`#reduce`"
+    :category_name: Blocks and Iterators
+  - :content: Why might you use `#each` instead of `for/in`?
+    :answer: It's the "Ruby way" - it is an example of how Ruby defines methods that
+      mimic natural language concepts. Iterator methods such as `#each` read more naturally.
+      `#each` is a block so it defines a new variable scope. `for/in` depends on the
+      existence of `#each` which implies that `#each` is a more fundamental part of
+      the language.
+    :category_name: Blocks and Iterators
+  - :content: What happens if a block in Ruby 1.9+ is passed two arguments but only
+      accepts one argument?
+    :answer: Nothing. Only the first argument will be passed to the block.
+    :category_name: Blocks and Iterators
+  - :content: How is a block anonymous?
+    :answer: It doesn't have a name. It doesn't exist beyond it's execution unless converted
+      to a Proc object.
+    :category_name: Blocks and Iterators
+  - :content: How does block invocation differ from method invocation?
+    :answer: Ruby will throw an exception if more than the expected number of arguments
+      are passed to a method. A block will simply ignore the extra values in Ruby 1.9+.
+    :category_name: Blocks and Iterators
+  - :content: Can methods in Ruby be overloaded?
+    :answer: No.
+    :category_name: Methods
+  - :content: How would you test whether an object has a method?
+    :answer: "`#respond_to?` or `#method?`"
+    :category_name: Methods
+  - :content: What is the meaning of `self`?
+    :answer: The current object.
+    :category_name: Methods
+  - :content: What does a bang `!` at the end of a method signify?
+    :answer: That it should be used cautiously. Methods with this naming convention
+      typically perform a mutation on the receiver object.
+    :category_name: Methods
+  - :content: What is a mutator method?
+    :answer: A method which alters the internal state of the object receiver.
+    :category_name: Methods
+  - :content: Is a method an object?
+    :answer: No, however, a `MethodObject` is an object.
+    :category_name: Methods
+  - :content: What is a predicate in the context of Ruby method naming conventions?
+    :answer: A method that answers a question posed by the method invocation or method
+      name. Predicates typically return a boolean.
+    :category_name: Methods
+  - :content: Are instance methods public or private?
+    :answer: They are public by default. You can change their visibility using `Module#private`,
+      `Module#protected`, or back again using `Module#public`.
+    :category_name: Methods
+  - :content: What are the two varieties of Proc objects?
+    :answer: Procs and lambdas.
+    :category_name: Procs and Lambdas
+  - :content: How might you send a message to a private method of a receiver object
+      from outside the scope of the receiver object?
+    :answer: "`#send`"
+    :category_name: Methods
+  - :content: How might you prevent future modifications to an object?
+    :answer: "`#freeze`"
+    :category_name: Methods
+  - :content: How is the invocation of a private method different than the invocation
+      of a public method from within its defining class?
+    :answer: It must be referenced in a functional manner without an explicit receiver
+      object and not on the class object itself or on the current object `self`.
+    :category_name: Methods
+  - :content: Can method names be capitalized?
+    :answer: Yes, but the convention is that they are not.
+    :category_name: Methods
+  - :content: What is the difference between private and protected methods?
+    :answer: A private method can only be called by any instance methods of the defining
+      class or any subclasses and must be invoked in a functional style and not explicitly
+      on `self` such as with `self.my_method`. A protected method may be explicitly
+      invoked by any instance of the defining class, and is not restricted to implicit
+      invocation on `self`.
+    :category_name: Methods
+  - :content: What is a singleton method?
+    :answer: A method that is available only on a single object.
+    :category_name: Methods
+  - :content: What is method name resolution?
+    :answer: The runtime lookup of the appropriate definition of a method.
+    :category_name: Methods
+  - :content: How does `return` differ from within a method than from within a block?
+    :answer: "`return` within a method returns from the method. `return` within a block
+      returns from its lexically enclosing method."
+    :category_name: Methods
+  - :content: Are class methods public or private?
+    :answer: They are public by default. You can change their visibility using `#private_class_method`
+      and back again using `#public_class_method`.
+    :category_name: Methods
+  - :content: Does a method return a value if it does not contain an expression?
+    :answer: Yes, it returns `nil`.
+    :category_name: Methods
+  - :content: If a method is declared outside a class or module definition at the top-level,
+      where does it live?
+    :answer: As a private instance method of `Object`, whose value of `self` resolves
+      to the special "main" object.
+    :category_name: Methods
+  - :content: What is the origin of the "keywords" `public`, `private`, and `protected`?
+    :answer: They are instance methods of the `Module` class. Since `Class` subclasses
+      `Module`, the methods can be invoked without explicit reference to `self` such
+      as `self.private`.
+    :category_name: Methods
+  - :content: Describe the method name resolution process.
+    :answer: "1. Check eigenclass for singleton methods including inheritance of eigenclasses
+      on class objects.  \n2. Check for instance methods.  \n3. Check for instance methods
+      of any included modules.  \n4. Check instance methods and instance methods of
+      any included modules in the inheritance hierarchy.  \n5. Invoke `#method_missing`
+      following steps 1-4, resolving to `Kernel#method_missing` if not found."
+    :category_name: Methods
+  - :content: How do you define a private class method?
+    :answer: Define the class method and then call `#private_class_method` with an argument
+      as a symbol of the class method name.
+    :category_name: Methods
+  - :content: Name two ways to disable methods.
+    :answer: "`undef method_name`, `#remove_method`, `#undef_method`"
+    :category_name: Methods
+  - :content: What is the difference between `#remove_method` and `#undef_method`?
+    :answer: "`#undef_method` prevents any invocation of the method through an instance
+      of the class, while `#remove_method` will remove the method definition from the
+      class, but not prevent inherited methods of the same name from being invoked."
+    :category_name: Methods
+  - :content: Explain how Ruby syntax supports object specifiers in parameters lists?
+    :answer: You can leave off the curly brackets from a hash in a parameter list, assuming
+      it is the last argument in the list.
+    :category_name: Methods
+  - :content: How do you accept an associated block within a Proc's parameters list.
+    :answer: Prefix `&` to the last parameter.
+    :category_name: Procs and Lambdas
+  - :content: What is true about a method argument that is prefixed with `&`?
+    :answer: It will refer to the calling block as a named Proc object. It must be the
+      last argument in the parameter list.
+    :category_name: Procs and Lambdas
+  - :content: What is the main difference between procs and lambdas?
+    :answer: Calling a lambda is more akin to invoking a method where a return statement
+      in a lambda will return from the lambda itself, instead of returning from the
+      lexically enclosing method, as procs do. Adding to this notion, lambdas must be
+      invoked with the exact number of arguments as is required by method invocation,
+      whereas procs are more flexible in receiving arguments.
+    :category_name: Procs and Lambdas
+  - :content: Does an object have to be a Proc object for a `&` to be prefixed to it
+      in a parameter list?
+    :answer: No, `&` can appear before any object with a `#to_proc` method.
+    :category_name: Procs and Lambdas
+  - :content: What is the difference between a Proc invocation and a lambda invocation?
+    :answer: There must be a block associated with lambda invocation. Lambdas must be
+      invoked with the exact number of arguments as is required by method invocation,
+      whereas procs are more flexible in receiving arguments.
+    :category_name: Procs and Lambdas
+  - :content: When might you encounter a `LocalJumpError`?
+    :answer: You would encounter this exception when attempting to return from a method
+      that has already returned such as if you attempt to return from a Proc object
+      whose lexically enclosing method has already returned.
+    :category_name: Procs and Lambdas
+  - :content: What is a closure in Ruby?
+    :answer: A closure is an object that is both an invocable function together with
+      a variable binding. The object retains access to the local variables that were
+      in scope at the time of the object definition.
+    :category_name: Closures
+  - :content: Does a closure in Ruby retain variables by value or by reference?
+    :answer: By reference; the closure also extends the lifetimes of its variables.
+    :category_name: Closures
+  - :content: A closure's reference to its variables is said to by dynamically bound.
+      What does this mean?
+    :answer: The values of the variables are looked up when the Proc object is executed.
+    :category_name: Closures
+  - :content: Is it possible to alter a closure?
+    :answer: Yes, you can access and alter the binding of a closure with `#binding`.
+    :category_name: Closures
+  - :content: What must you do first before you can invoke an `UnboundMethod` object?
+    :answer: Bind it to a receiver object using `#bind`.
+    :category_name: Method Objects
+  - :content: Are method objects closures?
+    :answer: No.
+    :category_name: Method Objects
+  - :content: How do you obtain a `Method` object from an existing module/class?
+    :answer: Using `Object#method`
+    :category_name: Method Objects
+  - :content: How do you obtain an `UnboundMethod` object from an existing module/class?
+    :answer: Using `Module#instance_method`
+    :category_name: Method Objects
+  - :content: Are constants public or private?
+    :answer: Public.
+    :category_name: Constants
+  - :content: What happens if you attempt to define a constant on a class from outside
+      the class?
+    :answer: It defines it successfully since constants are publicly accessible and
+      assignable.
+    :category_name: Constants
+  - :content: What happens to a constant that is not assigned?
+    :answer: It does not exist.
+    :category_name: Constants
+  - :content: If there exists `A::CONSTANT`, and `B` is a subclass of `A`, what does
+      a reference to `CONSTANT` (without a scope resolution operator) resolve to within
+      the lexical scope of `B`?
+    :answer: "`B::CONSTANT` since `B` has inherited `A::CONSTANT`."
+    :category_name: Constants
+  - :content: |
+      What is wrong with the following code?  ```ruby
+      class MyClass
+        def my_method
+          MY_CONSTANT = "hello"
+        end
+      end
+      ```
+    :answer: A constant cannot be assigned within the body of a method. Dynamic constant
+      assignment is not allowed.
+    :category_name: Constants
+  - :content: What does `String#chomp` do?
+    :answer: Removes a line terminator.
+    :category_name: 'Data Types: String'
+  - :content: What does `#attr_accessor` do?
+    :answer: Creates getter and setter methods for all the symbols naming attributes
+      it is passed as arguments.
+    :category_name: Classes
+  - :content: What is the difference between an instance variable and a class variable?
+    :answer: A class variable is always evaluated in reference to the class object created
+      by the enclosing class definition while an instance variables is always evaluated
+      in reference to `self`. Instance variables cannot be used outside of instance
+      methods.
+    :category_name: Classes
+  - :content: Why must a class name begin with a capital letter?
+    :answer: Because the class keyword creates a new constant that refers to the class
+      and constants must begin with a capital letter.
+    :category_name: Classes
+  - :content: Is `#initialize` an instance method or a class method?
+    :answer: An instance method.
+    :category_name: Classes
+  - :content: Why can't a class instance variable be used within an instance method?
+    :answer: Because it would be an instance method.
+    :category_name: Classes
+  - :content: What is the difference between a class variable and a class instance variable?
+    :answer: Class instance variables are instance variables of a class. Class instance
+      variables cannot be used within instance methods.
+    :category_name: Classes
+  - :content: What is a singleton?
+    :answer: A class with only one instance.
+    :category_name: Classes
+  - :content: What is the difference between a singleton and a singleton method?
+    :answer: A singleton is a class with only one instance while a singleton method
+      is a method that is available only on a single object.
+    :category_name: Classes
+  - :content: How do you create a singleton?
+    :answer: By including the `Singleton` module.
+    :category_name: Classes
+  - :content: Can you defined accessor methods for class instance variables?
+    :answer: Yes, if they are defined as singleton methods of the class.
+    :category_name: Classes
+  - :content: Can classes be nested?
+    :answer: Yes.
+    :category_name: Classes
+  - :content: Is `#initialize` public or private?
+    :answer: Private by default.
+    :category_name: Classes
+  - :content: What does `#allocate` do?
+    :answer: Creates an uninitialized instance of a class.
+    :category_name: Classes
+  - :content: What is an eigenclass?
+    :answer: An anonymous class associated with an object. An object's singleton methods
+      are instance methods of its associated eigenclass.
+    :category_name: Classes
+  - :content: What is the relationship between singleton methods and class methods?
+    :answer: Class methods are singleton methods of the eigenclass associated with the
+      class object.
+    :category_name: Classes
+  - :content: What is `Class::new`?
+    :answer: A class method of the `Class` object that creates new classes.
+    :category_name: Classes
+  - :content: If `Class` `B` is nested within `Class` `A`, and there exists a class
+      method on `A`, does `Class` `B` have access to this instance method on `Class`
+      `A`?
+    :answer: No. Nesting one class within another does not give the inner class any
+      special access to the methods or variables of the outer class.
+    :category_name: Classes
+  - :content: Are eigenclasses inherited?
+    :answer: The eigenclasses of an object are inherited from the eigenclasses of the
+      superclass of the class object. An eigenclass of an object instance stands alone
+      and does not inherit from any other classes.
+    :category_name: Classes
+  - :content: What happens to any return value of `#initialize`?
+    :answer: It is ignored.
+    :category_name: Classes
+  - :content: What is a factory method?
+    :answer: An initialization method that creates specialized instances of a class.
+    :category_name: Classes
+  - :content: What is the method to run initialization code on copied instances of an
+      object?
+    :answer: "`#initialize_copy`"
+    :category_name: Classes
+  - :content: What object is passed to `#initialize_copy`?
+    :answer: The original object that is being copied.
+    :category_name: Classes
+  - :content: Does `#initialize_copy` override `#initialize`?
+    :answer: No.
+    :category_name: Classes
+  - :content: What does it mean that `#dup` and `#clone` perform shallow copies?
+    :answer: The instance variables of the copy are copied by reference rather than
+      by value.
+    :category_name: Classes
+  - :content: What is the difference between `#dup` and `#clone`?
+    :answer: "`#clone` copies the frozen state of an object and any singleton methods
+      of an object while `#dup` does neither."
+    :category_name: Classes
+  - :content: Why might you not need to pass any arguments to the `#initialize` method
+      of a singleton class?
+    :answer: Since there is only one instance of the class, there will only be one variation
+      of the instance so any values it contains may be set explicitly from within the
+      class definition (such as in the `#initialize` method itself).
+    :category_name: Classes
+  - :content: What are two functions of modules?
+    :answer: As mixins or as namespaces.
+    :category_name: Modules
+  - :content: Can a module be subclassed?
+    :answer: No.
+    :category_name: Modules
+  - :content: What happens when a class includes a module?
+    :answer: The instance methods of the module become instance methods of the class.
+    :category_name: Modules
+  - :content: What happens when an object extends a module?
+    :answer: The instance methods of the module become singleton methods on the object.
+    :category_name: Modules
+  - :content: What is the superclass of `Class`?
+    :answer: "`Module`"
+    :category_name: Modules
+  - :content: Why must module names begin with a capital letter?
+    :answer: Because the module keyword creates a new constant that refers to the module
+      and constants must begin with a capital letter.
+    :category_name: Modules
+  - :content: How might you check if a module has been included by an object?
+    :answer: Using `#is_a?` such as with `my_obj.is_a? MyModule`.
+    :category_name: Modules
+  - :content: Concerning those methods that are namespaced by a module, why might you
+      explicitly invoke those methods on `self` rather than on the name of the module?
+    :answer: To DRY up the code. If the name of the module were to change then you would
+      not have to change all the references to that module name. The object referenced
+      by `self` would not change.
+    :category_name: Modules
+  - :content: Inferring from the behavior of `Module#include`, is this method a public
+      or private instance method of `Module`?
+    :answer: Private, because it can't be used outside of a `Module` or `Class` definition.
+    :category_name: Modules
+  - :content: What does `#module_function` do?
+    :answer: Makes class copies of the specified methods and makes instance methods
+      private.
+    :category_name: Modules
+  - :content: What is a `Struct` in Ruby?
+    :answer: A core Ruby class that generates other classes containing accessor methods
+      for the specified fields.
+    :category_name: Structs
+  - :content: Can you add methods to a `Struct`?
+    :answer: Yes.
+    :category_name: Structs
+  - :content: What's the difference between `#is_a?` and `#instance_of?`?
+    :answer: "`#instance_of?` ignores inheritance and any mixed-in modules."
+    :category_name: Inheritance
+  - :content: If `#super` is invoked without any arguments, which if any arguments get
+      passed to the superclass method?
+    :answer: All the arguments that were passed to the subclass method will be passed
+      to the superclass method.
+    :category_name: Inheritance
+  - :content: Are instance methods inherited?
+    :answer: No, since they are not defined by a class and thus are unrelated to the
+      inheritance mechanism.
+    :category_name: Inheritance
+  - :content: Are class methods inherited?
+    :answer: Yes.
+    :category_name: Inheritance
+  - :content: Are constants inherited?
+    :answer: Yes.
+    :category_name: Inheritance
+  - :content: Are class variables inherited?
+    :answer: No. The behavior is different than inheritance. Any alteration of a class
+      variable by a subclass affects that class variable in the superclass and all other
+      subclasses of the superclass.
+    :category_name: Inheritance
+  - :content: Why might you not want to use class variables?
+    :answer: Their values can be changed at any point in the inheritance chain which
+      could cause unexpected behavior in parent classes or subclasses which use those
+      class variables.
+    :category_name: Inheritance
+  - :content: What should you look out for when subclassing a class that is unknown
+      to you?
+    :answer: Overriding private methods or overwriting class variables.
+    :category_name: Inheritance
+  - :content: Are class methods inherited?
+    :answer: Yes.
+    :category_name: Inheritance
+  - :content: How might you prevent a method on a superclass from being inherited by
+      a subclass?
+    :answer: Override the method on the subclass or `undef` the method in the subclass.
+    :category_name: Inheritance
+  - :content: Name one method in Ruby core that might be considered "metaprogramming."
+    :answer: "`#attr_reader`, `#attr_accessor`, `#define_method`, `#method_missing`,
+      `#const_missing`, `#eval`, `#class_eval`, `#instance_eval`..."
+    :category_name: Metaprogramming
+  - :content: Is `#attr_reader` an example of metaprogramming?
+    :answer: Yes, since it creates getter methods at the time of the enclosing class
+      definition.
+    :category_name: Metaprogramming
+  - :content: How might you access an instance variable of a receiver object from outside
+      the scope of the receiver object?
+    :answer: With an accessor method or using `#instance_variables_get`, `#instance_eval`,
+      or `binding.eval`.
+    :category_name: Metaprogramming
+  - :content: Which method is invoked when a method is not found?
+    :answer: "`#method_missing`"
+    :category_name: Metaprogramming
+  - :content: How do you open an eigenclass from within its associated class?
+    :answer: "`class << self`"
+    :category_name: Metaprogramming
+  - :content: Why should you avoid calling `#eval` on text received from a user?
+    :answer: Because it could be malicious.
+    :category_name: Metaprogramming
+  - :content: What is a binding?
+    :answer: A representation of an object's variable bindings at some moment.
+    :category_name: Metaprogramming
+  - :content: What is Ruby's reflection API?
+    :answer: A collection of methods mostly defined by `Kernel`, `Object`, and `Module`
+      that allow a program to examine its own state and structure.
+    :category_name: Metaprogramming
+  - :content: Which method is called when a constant is not found?
+    :answer: "`#const_missing`"
+    :category_name: Metaprogramming
+  - :content: "`#define_method` accepts how many and of what types of arguments?"
+    :answer: A symbol as the method name and either a block or a `Method` object as
+      the method body.
+    :category_name: Metaprogramming
+  - :content: Does `#eval` accept a block?
+    :answer: No, `#eval` can only accept a string. `#class_eval` and `#instance_eval`
+      accept blocks.
+    :category_name: Metaprogramming
+  - :content: How might you obtain a reference to an eigenclass from within its associated
+      class?
+    :answer: "`eigenclass = class << self; self; end`"
+    :category_name: Metaprogramming
+  - :content: How might you change method visibility from outside a class definition?
+    :answer: Using `#class_eval`
+    :category_name: Metaprogramming
+  - :content: Why is `#eval` useful for testing code?
+    :answer: Because it doesn't alter the local scope.
+    :category_name: Metaprogramming
+  - :content: What is the difference between `#instance_eval` and `#instance_exec`?
+    :answer: "`#instance_exec` can only accept a block, and not a string, and it can
+      accept arguments and pass them to the block, allowing the block to be evaluated
+      in the context of the receiver object with parameters whose values come from the
+      block."
+    :category_name: Metaprogramming
+  - :content: Where do `#class_variable_get` and `#class_variables_set` live in the
+      object model?
+    :answer: "`Module`"
+    :category_name: Metaprogramming
+  - :content: Where do `#instance_variable_get` and `#instance_variables_set` live in
+      the object model?
+    :answer: "`Object`"
+    :category_name: Metaprogramming
+  - :content: Where do `#local_variables` and `#global` live in the object model?
+    :answer: "`Kernel`"
+    :category_name: Metaprogramming
+  - :content: Which is more common, `#require` or `#load`?
+    :answer: "`#require`"
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What is `$LOAD_PATH`?
+    :answer: A global array of strings of the directories to be searched when loading
+      files with the load and require methods. `$LOAD_PATH` is equivalent to `$:`.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What does `Kernel#__method__` return?
+    :answer: The name as a symbol of the currently executing method.
+    :category_name: Debugging
+  - :content: In Ruby 1.9+, what is the synonym of `Kernel#__method__`?
+    :answer: "`Kernel#__callee__`"
+    :category_name: Debugging
+  - :content: Is a method an object?
+    :answer: No, however, a `MethodObject` is an object.
+    :category_name: Methods
+  - :content: What is the difference between `#require` and `#load`?
+    :answer: "`#require` can load binary extensions. `#require` does not require a filename
+      extension. `#require` prevents multiple loads of the same file path. `#load` loads
+      the specified file at the current `$SAFE` level while `#require` loads the specified
+      file with a `$SAFE` level of 0."
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: Does a file loaded with `#require` or `#load` have access to the local
+      variables of the loading file?
+    :answer: No.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What is the difference between `#require` and `#require_relative`?
+    :answer: "`#require_relative` ignores the load path."
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What does `#autoload` do?
+    :answer: Allows lazy-loading of files when a constant assigned to a file is first
+      referenced.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What does `File#expand_path` do?
+    :answer: Converts a relative path to a fully qualified path.
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: What method in `Dir` is used to list the contents of a directory?
+    :answer: "`#entries`, `#foreach`..."
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: What is an `IO` object?
+    :answer: An IO object is an instance of class IO that can be used for reading or
+      writing binary data to and from a file.
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: In Ruby 1.9+, are RubyGems installation directories included in `$LOAD_PATH`?
+    :answer: Yes.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: In Ruby 1.9+, if more than one version of a Gem is installed, which version
+      will be used?
+    :answer: The Gem with the highest version number.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: In Ruby 1.9+, how would you alter the default version of a Gem that will
+      be used?
+    :answer: Using `Kernel#gem`.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: What can you say about objects derived from tainted objects?
+    :answer: They will also be tainted.
+    :category_name: Security
+  - :content: What is the default `$SAFE` level?
+    :answer: '0'
+    :category_name: Security
+  - :content: What happens when you attempt to lower the `$SAFE` level?
+    :answer: You cannot lower the `$SAFE` level. It can only be raised.
+    :category_name: Security
+  - :content: What is the difference between taint and trust?
+    :answer: Taint is derived from the environment such as the command line, environment
+      variables, files, sockets, etc..., while trust is derived from the `$SAFE` level
+      of the originating code. Untrusted objects are both untrusted and tainted.
+    :category_name: Security
+  - :content: What error is raised if a method is passed the wrong number of arguments?
+    :answer: "`ArgumentError`"
+    :category_name: Exceptions
+  - :content: What error is raised if no `#method_missing` methods resolve to a method?
+    :answer: "`NoMethodError`"
+    :category_name: Exceptions
+  - :content: The superclass of `StandardError` is __.
+    :answer: "`Exception`"
+    :category_name: Exceptions
+  - :content: What does the default implementation of `Kernel#module_missing` do?
+    :answer: Just raises a `NoMethodError`.
+    :category_name: Exceptions
+  - :content: What happens if you attempt to redefine `BasicObject#__send__`?
+    :answer: Ruby issues a warning.
+    :category_name: Exceptions
+  - :content: What is the difference between `#to_s` and `#inspect`?
+    :answer: "`#inspect` is the same as `#to_s`, except for that some classes redefine
+      `#inspect` to provide output that is more helpful in debugging."
+    :category_name: Debugging
+  - :content: What is the difference between `#puts` and `#p`?
+    :answer: "`#p` converts objects to strings with the `#inspect` method instead of
+      with `#to_s`."
+    :category_name: Debugging
+  - :content: Which Ruby interpreter option enables debugging?
+    :answer: "`-d` or `--debug`"
+    :category_name: Debugging
+  - :content: What is the global variable for the last exception raised?
+    :answer: "`$ERROR_INFO` equivalent to `$!`"
+    :category_name: Debugging
+  - :content: How might you obtain the current state of the call stack?
+    :answer: Using `Exception.backtrace` or `Kernel#caller`
+    :category_name: Debugging
+  - :content: Are strings mutable?
+    :answer: Yes.
+    :category_name: 'Data Types: String'
+  - :content: What is the difference between `#puts` and `#prints`?
+    :answer: "`#puts` appends a newline to the output."
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: Where do the curly brackets to define a hash literal `{}` exist in Ruby's
+      object model?
+    :answer: It does not exist within the object model. It exists as a function of the
+      interpreter.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: In Ruby 2.0, what is the default encoding in MRI?
+    :answer: UTF-8
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What is the global constant used to access environment variable settings
+      in effect for the interpreter?
+    :answer: "`ENV`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: How does Ruby know that a setter method such as `X#[]=` will be called
+      in the expression `x = X.new; x.field = []`?
+    :answer: It is a syntactical conversion of the interpreter.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What is the global constant to access arguments specified on the command
+      line?
+    :answer: "`ARGV`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: Which Ruby interpreter option enables warning about deprecated or problematic
+      code?
+    :answer: "`-w`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: In MRI, which objects are not subject to garbage collection?
+    :answer: Symbols.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What module in the standard library enables English language alternatives
+      to terse global variables?
+    :answer: "`English`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What are the only two values that are falsy?
+    :answer: "`false` and `nil`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: 'True or False: Ruby uses short-circuit evaluation for boolean operators.'
+    :answer: True.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby whitespace-dependent?
+    :answer: Sometimes.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is the highest level in the object model in Ruby 1.9+?
+    :answer: "`BasicObject`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is everything in Ruby an object?
+    :answer: No. Methods are not objects. Blocks are not objects. Keywords are not objects.
+      However, there exist Method objects and Proc objects, and some keywords refer
+      to objects.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Which core object includes the `Kernel` module?
+    :answer: "`Object`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: What can you say for sure about an identifier that begins with a capital
+      letter?
+    :answer: It is a constant.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What does DSL stand for and why does it come up when describing Ruby?
+    :answer: A Domain Specific Language is an API that allows you to solve a problem
+      or represent data more naturally than you could otherwise. The flexible nature
+      of Ruby's syntax and the ability to alias and alter existing methods and classes
+      makes it conducive to creating DSL's.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is duck typing and how does it apply to Ruby?
+    :answer: That an object may be acted upon even if it isn't the expected type as
+      long as it looks and behaves like the expected object. This is a characteristic
+      of Ruby because the lack of type checking of parameters makes this an effective
+      programming technique.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby a statically typed or a dynamically typed language?
+    :answer: Dynamically typed since type checking is done at runtime.
+    :category_name: Language Characteristics and Core Objects
+  - :content: Is Ruby a strongly typed or a weakly typed language?
+    :answer: Strongly typed since an object's type is checked before an operation is
+      performed on it.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What does it mean to coerce an object? Why would you do it?
+    :answer: To coerce the object into an expected type. You might do this in order
+      to try and force an unknown object type into the expected type or format required
+      by the operation.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What is the difference between a statement and an expression in Ruby?
+    :answer: All statements are expressions in Ruby since all statements return a value.
+      A statement is simply a way to refer to a certain type of syntax.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What module would need to use for cryptographically secure random numbers?
+    :answer: "`SecureRandom`"
+    :category_name: Language Characteristics and Core Objects
+  - :content: Where does scope change in a Ruby program?
+    :answer: At `module`, `class`, and `def`.
+    :category_name: Language Characteristics and Core Objects
+  - :content: What does `String#chop` do?
+    :answer: Removes the trailing character or line terminator.
+    :category_name: 'Data Types: String'
+  - :content: Why might you want to avoid using string literals within loops?
+    :answer: A new object is created for every string literal even when the values are
+      identical.
+    :category_name: 'Data Types: String'
+  - :content: Is a `String` object enumerable in Ruby 1.9+?
+    :answer: No.
+    :category_name: 'Data Types: String'
+  - :content: What method might you use to enumerate over a `String` in Ruby 1.9+?
+    :answer: "`#each_char`"
+    :category_name: 'Data Types: String'
+  - :content: What is the difference between a character literal such as `?A` and a
+      string literal such as `"A"`?
+    :answer: There is no difference in Ruby 1.9+.
+    :category_name: 'Data Types: String'
+  - :content: What is a symbol?
+    :answer: Symbols are scalar value objects used as identifiers, mapping immutable
+      strings to fixed internal values.
+    :category_name: 'Data Types: Symbol'
+  - :content: Why are symbols typically used as hash keys instead of strings?
+    :answer: Strings are mutable while symbols are immutable. Though Ruby internally
+      makes an immutable copy of a string when used as a hash key, comparing two symbols
+      is faster than comparing two `String` objects. This is also a convention.
+    :category_name: 'Data Types: Symbol'
+  - :content: What can't you do to instantiations of `Symbol` and `Fixnum` that you
+      can do to all other instances of core Ruby objects?
+    :answer: Define singleton methods on them.
+    :category_name: 'Data Types: Symbol'
+  - :content: 'True or False: It''s possible to initialize a symbol with `Symbol.new`?'
+    :answer: 'False'
+    :category_name: 'Data Types: Symbol'
+  - :content: Are `Numeric` objects mutable?
+    :answer: No.
+    :category_name: 'Data Types: Numeric'
+  - :content: Symbols are immutable objects. Name another immutable core Ruby object.
+    :answer: "`Fixnum`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What happens when a value is too big for `Fixnum`?
+    :answer: It is automatically converted to a `Bignum`.
+    :category_name: 'Data Types: Numeric'
+  - :content: The superclass of `Fixnum` is __.
+    :answer: "`Integer`"
+    :category_name: 'Data Types: Numeric'
+  - :content: The superclass of `Integer` is __.
+    :answer: "`Numeric`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What numeric class might you use to avoid the rounding error inherent
+      in the use of binary floating-point arithmetic?
+    :answer: "`BigDecimal`"
+    :category_name: 'Data Types: Numeric'
+  - :content: What method might you use to remove duplicate values from an array?
+    :answer: "`#uniq`"
+    :category_name: 'Data Types: Array'
+  - :content: What is the %w syntax used for?
+    :answer: "It is a shortcut for array of strings\n```ruby\n a = %w(superman batman)
+      #=> [\"superman\", \"batman\"]\n```\n   "
+    :category_name: 'Data Types: Array'
+  - :content: What does `%W` allow for?
+    :answer: With `%W` it is possible to define an array containing string interpolation.
+    :category_name: 'Data Types: Array'
+  - :content: 'True or False: `a, b = [''foo'', ''bar'']` #=> `a = ''foo'', b = ''bar''`'
+    :answer: 'True'
+    :category_name: 'Data Types: Array'
+  - :content: 'True or False: This will throw an exception `a, b = 1, 2, 3, 4`'
+    :answer: 'False '
+    :category_name: 'Data Types: Array'
+  - :content: Name one synonym for `#key?`?
+    :answer: "`#has_key?`, `#include?`, `#member?`"
+    :category_name: 'Data Types: Hash'
+  - :content: How do you specify a default value for a hash?
+    :answer: Pass the default values as an argument to `#new` on initialization or change
+      the default directly with the setter method `Hash#default`. You may also provide
+      a default at time of query using `#fetch`.
+    :category_name: 'Data Types: Hash'
+  - :content: Does `Hash` use `#==` or `#eql?` to compare hash keys?
+    :answer: "`#eql?`"
+    :category_name: 'Data Types: Hash'
+  - :content: In what order are the values of a hash iteration in Ruby 1.9+?
+    :answer: The order in which they were inserted.
+    :category_name: 'Data Types: Hash'
+  - :content: What is the synonym of `Hash#store`?
+    :answer: "`Hash#[]=`"
+    :category_name: 'Data Types: Hash'
+  - :content: Why can you safely use a `String` as a hash key, even though a string
+      is a mutable object?
+    :answer: Because Ruby makes a private copy of a string used as a hash key.
+    :category_name: 'Data Types: Hash'
+  - :content: What is a mutator method?
+    :answer: A method which alters the internal state of the object receiver.
+    :category_name: Methods
+  - :content: Why might you want to use `Hash#fetch` over `Hash#[]` when querying values
+      in a hash?
+    :answer: It provides options for handling the case where a key does not exist in
+      the hash.
+    :category_name: 'Data Types: Hash'
+  - :content: When would you need to use `Hash#rehash`?
+    :answer: After you mutate a mutable hash key.
+    :category_name: 'Data Types: Hash'
+  - :content: What are two uses of ranges?
+    :answer: comparison, iteration
+    :category_name: 'Data Types: Range'
+  - :content: How might you include an expression within a `Regexp` literal?
+    :answer: Using `` just like as in a double-quoted string literal.
+    :category_name: 'Data Types: Regexp'
+  - :content: What is the global variable for the last `Regexp` match?
+    :answer: "`$LAST_MATCH_INFO` equivalent to `$~`"
+    :category_name: 'Data Types: Regexp'
+  - :content: What does the `%r` syntax allow and why is it useful?
+    :answer: It creates a `Regexp` object, in which you don't need to escape /
+    :category_name: 'Data Types: Regexp'
+  - :content: What are two uses of the splat operator?
+    :answer: Explode/expand the elements of an array. Collect arguments of a parameter
+      list into an array.
+    :category_name: Operators
+  - :content: What is the only operator that operates on three operands?
+    :answer: The conditional operator `?:` (sometimes referred to as the ternary if
+      operator).
+    :category_name: Operators
+  - :content: Which operator must be defined in order to implement the `Comparable`
+      module?
+    :answer: "`<=>`"
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#equal?`?
+    :answer: "`#==` performs the generic comparison and is implemented differently across
+      classes while `#equal?` is defined on `BasicObject` and compares object identity.
+      Therefore, `#equal?` should not be overridden in subclasses."
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#===`?
+    :answer: "`#==` performs the generic comparison while `#===` performs case equality
+      comparison and is useful for providing meaningful semantics in case statements."
+    :category_name: Operators
+  - :content: What is the difference between `#==` and `#eql?`?
+    :answer: "`#eql?` is sometimes an alternate equality. `Hash` uses `#eql?` to test
+      for hash key equality. `Numeric` types perform type conversion across `#==` but
+      not across `#eql?`, thus `#eql?` performs a stricter comparison than `#==` in
+      that case."
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `and`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `=`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `and` or `=`
+    :answer: "`=`"
+    :category_name: Operators
+  - :content: Which binds more tightly? `&&` or `||`
+    :answer: "`&&`"
+    :category_name: Operators
+  - :content: What is the arity of an operator?
+    :answer: The number of values the operator performs on.
+    :category_name: Operators
+  - :content: What is a statement modifier?
+    :answer: A condition after a statement such as with `x = 1 if a == true`
+    :category_name: Control Structures
+  - :content: Does a while block define it's own variable scope?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: Does a case statement have fall-through behavior?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: What is the difference between `throw/catch` and `raise/rescue`?
+    :answer: "`throw` and `catch` accept matching symbols as arguments and should be
+      considered a control-flow structure where `raise` and `rescue` is used to raise
+      and handle exceptions. `throw` and `catch` are not commonly used while exception
+      handling with `raise` and `rescue` is used often - a `rescue` clause is a fundamental
+      part of the Ruby language."
+    :category_name: Control Structures
+  - :content: Does a `rescue` block define it's own variable scope?
+    :answer: No.
+    :category_name: Control Structures
+  - :content: What are some advantages of a case statement versus repeated `elsif` statements?
+    :answer: It shows intent. It DRY's out the condition.
+    :category_name: Control Structures
+  - :content: Are constants inherited?
+    :answer: Yes.
+    :category_name: Inheritance
+  - :content: What are some disadvantages of a case statement versus repeated `elsif`
+      statements?
+    :answer: The statement is typically resistant to modification without a complete
+      refactoring of the entire control structure. The case statement can be confusing
+      if multiple comma-separated expressions are associated with a single when clause.
+    :category_name: Control Structures
+  - :content: Name three methods of the `Enumerable` module.
+    :answer: "`#each`, `#map`, `#select`, `#find`, `#inject`..."
+    :category_name: Blocks and Iterators
+  - :content: Name two `Enumerable` classes (classes which mix in the `Enumerable` module).
+    :answer: "`Array`, `Hash`, `Set`, `Range`, `IO`..."
+    :category_name: Blocks and Iterators
+  - :content: When might you use the `do`/`end` syntax versus using the curly bracket
+      syntax for a block?
+    :answer: The `do`/`end` syntax for a block is commonly used for multi-line statements.
+      An alternate convention is to use curly bracket syntax for blocks that return
+      a value while using `do`/`end` syntax for blocks that change the state of the
+      system somehow and do not return a value.
+    :category_name: Blocks and Iterators
+  - :content: What is an iterator?
+    :answer: An object that allows traversal of the elements of the container. In Ruby,
+      an iterator is any method that uses the yield statement.
+    :category_name: Blocks and Iterators
+  - :content: How do you define block-local variables in a block's parameter list?
+    :answer: Variables that appear after a semicolon in a block's parameter list are
+      guaranteed to be local to the block.
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#include?`?
+    :answer: "`#member?`"
+    :category_name: Blocks and Iterators
+  - :content: Can a collection be modified while it is being iterated upon?
+    :answer: Yes.
+    :category_name: Blocks and Iterators
+  - :content: Is a block an object?
+    :answer: No. A block is a syntactic structure of the interpreter. However, a block
+      can be converted to a Proc object.
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#collect`?
+    :answer: "`#map`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#find`?
+    :answer: "`#detect`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#select`?
+    :answer: "`#find_all`"
+    :category_name: Blocks and Iterators
+  - :content: What is the opposite of `#select`?
+    :answer: "`#reject`"
+    :category_name: Blocks and Iterators
+  - :content: What is the synonym of `#inject`?
+    :answer: "`#reduce`"
+    :category_name: Blocks and Iterators
+  - :content: Why might you use `#each` instead of `for/in`?
+    :answer: It's the "Ruby way" - it is an example of how Ruby defines methods that
+      mimic natural language concepts. Iterator methods such as `#each` read more naturally.
+      `#each` is a block so it defines a new variable scope. `for/in` depends on the
+      existence of `#each` which implies that `#each` is a more fundamental part of
+      the language.
+    :category_name: Blocks and Iterators
+  - :content: What happens if a block in Ruby 1.9+ is passed two arguments but only
+      accepts one argument?
+    :answer: Nothing. Only the first argument will be passed to the block.
+    :category_name: Blocks and Iterators
+  - :content: How is a block anonymous?
+    :answer: It doesn't have a name. It doesn't exist beyond it's execution unless converted
+      to a Proc object.
+    :category_name: Blocks and Iterators
+  - :content: How does block invocation differ from method invocation?
+    :answer: Ruby will throw an exception if more than the expected number of arguments
+      are passed to a method. A block will simply ignore the extra values in Ruby 1.9+.
+    :category_name: Blocks and Iterators
+  - :content: Can methods in Ruby be overloaded?
+    :answer: No.
+    :category_name: Methods
+  - :content: How would you test whether an object has a method?
+    :answer: "`#respond_to?` or `#method?`"
+    :category_name: Methods
+  - :content: What is the meaning of `self`?
+    :answer: The current object.
+    :category_name: Methods
+  - :content: What does a bang `!` at the end of a method signify?
+    :answer: That it should be used cautiously. Methods with this naming convention
+      typically perform a mutation on the receiver object.
+    :category_name: Methods
+  - :content: Are constants public or private?
+    :answer: Public.
+    :category_name: Constants
+  - :content: What is a predicate in the context of Ruby method naming conventions?
+    :answer: A method that answers a question posed by the method invocation or method
+      name. Predicates typically return a boolean.
+    :category_name: Methods
+  - :content: Are instance methods public or private?
+    :answer: They are public by default. You can change their visibility using `Module#private`,
+      `Module#protected`, or back again using `Module#public`.
+    :category_name: Methods
+  - :content: When might you explicitly use the `return` statement.
+    :answer: To return from a method prematurely or to return multiple values.
+    :category_name: Methods
+  - :content: Why might you want to alias a method?
+    :answer: To create a synonym for the method that is more readable or appropriate
+      for the context of some problems. To add functionality to a method.
+    :category_name: Methods
+  - :content: How might you send a message to a private method of a receiver object
+      from outside the scope of the receiver object?
+    :answer: "`#send`"
+    :category_name: Methods
+  - :content: How might you prevent future modifications to an object?
+    :answer: "`#freeze`"
+    :category_name: Methods
+  - :content: How is the invocation of a private method different than the invocation
+      of a public method from within its defining class?
+    :answer: It must be referenced in a functional manner without an explicit receiver
+      object and not on the class object itself or on the current object `self`.
+    :category_name: Methods
+  - :content: Can method names be capitalized?
+    :answer: Yes, but the convention is that they are not.
+    :category_name: Methods
+  - :content: What is the difference between private and protected methods?
+    :answer: A private method can only be called by any instance methods of the defining
+      class or any subclasses and must be invoked in a functional style and not explicitly
+      on `self` such as with `self.my_method`. A protected method may be explicitly
+      invoked by any instance of the defining class, and is not restricted to implicit
+      invocation on `self`.
+    :category_name: Methods
+  - :content: What is a singleton method?
+    :answer: A method that is available only on a single object.
+    :category_name: Methods
+  - :content: What is method name resolution?
+    :answer: The runtime lookup of the appropriate definition of a method.
+    :category_name: Methods
+  - :content: How does `return` differ from within a method than from within a block?
+    :answer: "`return` within a method returns from the method. `return` within a block
+      returns from its lexically enclosing method."
+    :category_name: Methods
+  - :content: Are class methods public or private?
+    :answer: They are public by default. You can change their visibility using `#private_class_method`
+      and back again using `#public_class_method`.
+    :category_name: Methods
+  - :content: Does a method return a value if it does not contain an expression?
+    :answer: Yes, it returns `nil`.
+    :category_name: Methods
+  - :content: If a method is declared outside a class or module definition at the top-level,
+      where does it live?
+    :answer: As a private instance method of `Object`, whose value of `self` resolves
+      to the special "main" object.
+    :category_name: Methods
+  - :content: What is the origin of the "keywords" `public`, `private`, and `protected`?
+    :answer: They are instance methods of the `Module` class. Since `Class` subclasses
+      `Module`, the methods can be invoked without explicit reference to `self` such
+      as `self.private`.
+    :category_name: Methods
+  - :content: Describe the method name resolution process.
+    :answer: "1. Check eigenclass for singleton methods including inheritance of eigenclasses
+      on class objects.  \n2. Check for instance methods.  \n3. Check for instance methods
+      of any included modules.  \n4. Check instance methods and instance methods of
+      any included modules in the inheritance hierarchy.  \n5. Invoke `#method_missing`
+      following steps 1-4, resolving to `Kernel#method_missing` if not found."
+    :category_name: Methods
+  - :content: Which is more common, `#require` or `#load`?
+    :answer: "`#require`"
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: How do you define a private class method?
+    :answer: Define the class method and then call `#private_class_method` with an argument
+      as a symbol of the class method name.
+    :category_name: Methods
+  - :content: Name two ways to disable methods.
+    :answer: "`undef method_name`, `#remove_method`, `#undef_method`"
+    :category_name: Methods
+  - :content: What is the difference between `#remove_method` and `#undef_method`?
+    :answer: "`#undef_method` prevents any invocation of the method through an instance
+      of the class, while `#remove_method` will remove the method definition from the
+      class, but not prevent inherited methods of the same name from being invoked."
+    :category_name: Methods
+  - :content: Explain how Ruby syntax supports object specifiers in parameters lists?
+    :answer: You can leave off the curly brackets from a hash in a parameter list, assuming
+      it is the last argument in the list.
+    :category_name: Methods
+  - :content: What are the two varieties of Proc objects?
+    :answer: Procs and lambdas.
+    :category_name: Procs and Lambdas
+  - :content: How do you accept an associated block within a Proc's parameters list.
+    :answer: Prefix `&` to the last parameter.
+    :category_name: Procs and Lambdas
+  - :content: What is true about a method argument that is prefixed with `&`?
+    :answer: It will refer to the calling block as a named Proc object. It must be the
+      last argument in the parameter list.
+    :category_name: Procs and Lambdas
+  - :content: What is the main difference between procs and lambdas?
+    :answer: Calling a lambda is more akin to invoking a method where a return statement
+      in a lambda will return from the lambda itself, instead of returning from the
+      lexically enclosing method, as procs do. Adding to this notion, lambdas must be
+      invoked with the exact number of arguments as is required by method invocation,
+      whereas procs are more flexible in receiving arguments.
+    :category_name: Procs and Lambdas
+  - :content: Does an object have to be a Proc object for a `&` to be prefixed to it
+      in a parameter list?
+    :answer: No, `&` can appear before any object with a `#to_proc` method.
+    :category_name: Procs and Lambdas
+  - :content: What is the difference between a Proc invocation and a lambda invocation?
+    :answer: There must be a block associated with lambda invocation. Lambdas must be
+      invoked with the exact number of arguments as is required by method invocation,
+      whereas procs are more flexible in receiving arguments.
+    :category_name: Procs and Lambdas
+  - :content: When might you encounter a `LocalJumpError`?
+    :answer: You would encounter this exception when attempting to return from a method
+      that has already returned such as if you attempt to return from a Proc object
+      whose lexically enclosing method has already returned.
+    :category_name: Procs and Lambdas
+  - :content: What is a closure in Ruby?
+    :answer: A closure is an object that is both an invocable function together with
+      a variable binding. The object retains access to the local variables that were
+      in scope at the time of the object definition.
+    :category_name: Closures
+  - :content: Does a closure in Ruby retain variables by value or by reference?
+    :answer: By reference; the closure also extends the lifetimes of its variables.
+    :category_name: Closures
+  - :content: A closure's reference to its variables is said to by dynamically bound.
+      What does this mean?
+    :answer: The values of the variables are looked up when the Proc object is executed.
+    :category_name: Closures
+  - :content: Is it possible to alter a closure?
+    :answer: Yes, you can access and alter the binding of a closure with `#binding`.
+    :category_name: Closures
+  - :content: What must you do first before you can invoke an `UnboundMethod` object?
+    :answer: Bind it to a receiver object using `#bind`.
+    :category_name: Method Objects
+  - :content: Are method objects closures?
+    :answer: No.
+    :category_name: Method Objects
+  - :content: How do you obtain a `Method` object from an existing module/class?
+    :answer: Using `Object#method`
+    :category_name: Method Objects
+  - :content: How do you obtain an `UnboundMethod` object from an existing module/class?
+    :answer: Using `Module#instance_method`
+    :category_name: Method Objects
+  - :content: What happens if you attempt to define a constant on a class from outside
+      the class?
+    :answer: It defines it successfully since constants are publicly accessible and
+      assignable.
+    :category_name: Constants
+  - :content: What happens to a constant that is not assigned?
+    :answer: It does not exist.
+    :category_name: Constants
+  - :content: If there exists `A::CONSTANT`, and `B` is a subclass of `A`, what does
+      a reference to `CONSTANT` (without a scope resolution operator) resolve to within
+      the lexical scope of `B`?
+    :answer: "`B::CONSTANT` since `B` has inherited `A::CONSTANT`."
+    :category_name: Constants
+  - :content: |
+      What is wrong with the following code?  ```ruby
+      class MyClass
+        def my_method
+          MY_CONSTANT = "hello"
+        end
+      end
+      ```
+    :answer: A constant cannot be assigned within the body of a method. Dynamic constant
+      assignment is not allowed.
+    :category_name: Constants
+  - :content: What does `#attr_accessor` do?
+    :answer: Creates getter and setter methods for all the symbols naming attributes
+      it is passed as arguments.
+    :category_name: Classes
+  - :content: What is the difference between an instance variable and a class variable?
+    :answer: A class variable is always evaluated in reference to the class object created
+      by the enclosing class definition while an instance variables is always evaluated
+      in reference to `self`. Instance variables cannot be used outside of instance
+      methods.
+    :category_name: Classes
+  - :content: Why must a class name begin with a capital letter?
+    :answer: Because the class keyword creates a new constant that refers to the class
+      and constants must begin with a capital letter.
+    :category_name: Classes
+  - :content: Is `#initialize` an instance method or a class method?
+    :answer: An instance method.
+    :category_name: Classes
+  - :content: Why can't a class instance variable be used within an instance method?
+    :answer: Because it would be an instance method.
+    :category_name: Classes
+  - :content: What is the difference between a class variable and a class instance variable?
+    :answer: Class instance variables are instance variables of a class. Class instance
+      variables cannot be used within instance methods.
+    :category_name: Classes
+  - :content: What is a singleton?
+    :answer: A class with only one instance.
+    :category_name: Classes
+  - :content: What is the difference between a singleton and a singleton method?
+    :answer: A singleton is a class with only one instance while a singleton method
+      is a method that is available only on a single object.
+    :category_name: Classes
+  - :content: How do you create a singleton?
+    :answer: By including the `Singleton` module.
+    :category_name: Classes
+  - :content: Can you defined accessor methods for class instance variables?
+    :answer: Yes, if they are defined as singleton methods of the class.
+    :category_name: Classes
+  - :content: Can classes be nested?
+    :answer: Yes.
+    :category_name: Classes
+  - :content: Is `#initialize` public or private?
+    :answer: Private by default.
+    :category_name: Classes
+  - :content: What does `#allocate` do?
+    :answer: Creates an uninitialized instance of a class.
+    :category_name: Classes
+  - :content: What is an eigenclass?
+    :answer: An anonymous class associated with an object. An object's singleton methods
+      are instance methods of its associated eigenclass.
+    :category_name: Classes
+  - :content: What is the relationship between singleton methods and class methods?
+    :answer: Class methods are singleton methods of the eigenclass associated with the
+      class object.
+    :category_name: Classes
+  - :content: What is `Class::new`?
+    :answer: A class method of the `Class` object that creates new classes.
+    :category_name: Classes
+  - :content: If `Class` `B` is nested within `Class` `A`, and there exists a class
+      method on `A`, does `Class` `B` have access to this instance method on `Class`
+      `A`?
+    :answer: No. Nesting one class within another does not give the inner class any
+      special access to the methods or variables of the outer class.
+    :category_name: Classes
+  - :content: Are instance methods inherited?
+    :answer: No, since they are not defined by a class and thus are unrelated to the
+      inheritance mechanism.
+    :category_name: Inheritance
+  - :content: Are eigenclasses inherited?
+    :answer: The eigenclasses of an object are inherited from the eigenclasses of the
+      superclass of the class object. An eigenclass of an object instance stands alone
+      and does not inherit from any other classes.
+    :category_name: Classes
+  - :content: What happens to any return value of `#initialize`?
+    :answer: It is ignored.
+    :category_name: Classes
+  - :content: What is a factory method?
+    :answer: An initialization method that creates specialized instances of a class.
+    :category_name: Classes
+  - :content: What is the method to run initialization code on copied instances of an
+      object?
+    :answer: "`#initialize_copy`"
+    :category_name: Classes
+  - :content: What object is passed to `#initialize_copy`?
+    :answer: The original object that is being copied.
+    :category_name: Classes
+  - :content: Does `#initialize_copy` override `#initialize`?
+    :answer: No.
+    :category_name: Classes
+  - :content: What does it mean that `#dup` and `#clone` perform shallow copies?
+    :answer: The instance variables of the copy are copied by reference rather than
+      by value.
+    :category_name: Classes
+  - :content: What is the difference between `#dup` and `#clone`?
+    :answer: "`#clone` copies the frozen state of an object and any singleton methods
+      of an object while `#dup` does neither."
+    :category_name: Classes
+  - :content: Why might you not need to pass any arguments to the `#initialize` method
+      of a singleton class?
+    :answer: Since there is only one instance of the class, there will only be one variation
+      of the instance so any values it contains may be set explicitly from within the
+      class definition (such as in the `#initialize` method itself).
+    :category_name: Classes
+  - :content: What are two functions of modules?
+    :answer: As mixins or as namespaces.
+    :category_name: Modules
+  - :content: Can a module be subclassed?
+    :answer: No.
+    :category_name: Modules
+  - :content: What happens when a class includes a module?
+    :answer: The instance methods of the module become instance methods of the class.
+    :category_name: Modules
+  - :content: What happens when an object extends a module?
+    :answer: The instance methods of the module become singleton methods on the object.
+    :category_name: Modules
+  - :content: What is the superclass of `Class`?
+    :answer: "`Module`"
+    :category_name: Modules
+  - :content: Why must module names begin with a capital letter?
+    :answer: Because the module keyword creates a new constant that refers to the module
+      and constants must begin with a capital letter.
+    :category_name: Modules
+  - :content: How might you check if a module has been included by an object?
+    :answer: Using `#is_a?` such as with `my_obj.is_a? MyModule`.
+    :category_name: Modules
+  - :content: Concerning those methods that are namespaced by a module, why might you
+      explicitly invoke those methods on `self` rather than on the name of the module?
+    :answer: To DRY up the code. If the name of the module were to change then you would
+      not have to change all the references to that module name. The object referenced
+      by `self` would not change.
+    :category_name: Modules
+  - :content: Inferring from the behavior of `Module#include`, is this method a public
+      or private instance method of `Module`?
+    :answer: Private, because it can't be used outside of a `Module` or `Class` definition.
+    :category_name: Modules
+  - :content: What does `#module_function` do?
+    :answer: Makes class copies of the specified methods and makes instance methods
+      private.
+    :category_name: Modules
+  - :content: What is a `Struct` in Ruby?
+    :answer: A core Ruby class that generates other classes containing accessor methods
+      for the specified fields.
+    :category_name: Structs
+  - :content: Can you add methods to a `Struct`?
+    :answer: Yes.
+    :category_name: Structs
+  - :content: What's the difference between `#is_a?` and `#instance_of?`?
+    :answer: "`#instance_of?` ignores inheritance and any mixed-in modules."
+    :category_name: Inheritance
+  - :content: If `#super` is invoked without any arguments, which if any arguments get
+      passed to the superclass method?
+    :answer: All the arguments that were passed to the subclass method will be passed
+      to the superclass method.
+    :category_name: Inheritance
+  - :content: Are class variables inherited?
+    :answer: No. The behavior is different than inheritance. Any alteration of a class
+      variable by a subclass affects that class variable in the superclass and all other
+      subclasses of the superclass.
+    :category_name: Inheritance
+  - :content: Why might you not want to use class variables?
+    :answer: Their values can be changed at any point in the inheritance chain which
+      could cause unexpected behavior in parent classes or subclasses which use those
+      class variables.
+    :category_name: Inheritance
+  - :content: What should you look out for when subclassing a class that is unknown
+      to you?
+    :answer: Overriding private methods or overwriting class variables.
+    :category_name: Inheritance
+  - :content: How might you prevent a method on a superclass from being inherited by
+      a subclass?
+    :answer: Override the method on the subclass or `undef` the method in the subclass.
+    :category_name: Inheritance
+  - :content: Name one method in Ruby core that might be considered "metaprogramming."
+    :answer: "`#attr_reader`, `#attr_accessor`, `#define_method`, `#method_missing`,
+      `#const_missing`, `#eval`, `#class_eval`, `#instance_eval`..."
+    :category_name: Metaprogramming
+  - :content: Is `#attr_reader` an example of metaprogramming?
+    :answer: Yes, since it creates getter methods at the time of the enclosing class
+      definition.
+    :category_name: Metaprogramming
+  - :content: How might you access an instance variable of a receiver object from outside
+      the scope of the receiver object?
+    :answer: With an accessor method or using `#instance_variables_get`, `#instance_eval`,
+      or `binding.eval`.
+    :category_name: Metaprogramming
+  - :content: Which method is invoked when a method is not found?
+    :answer: "`#method_missing`"
+    :category_name: Metaprogramming
+  - :content: How do you open an eigenclass from within its associated class?
+    :answer: "`class << self`"
+    :category_name: Metaprogramming
+  - :content: Why should you avoid calling `#eval` on text received from a user?
+    :answer: Because it could be malicious.
+    :category_name: Metaprogramming
+  - :content: What is a binding?
+    :answer: A representation of an object's variable bindings at some moment.
+    :category_name: Metaprogramming
+  - :content: What is Ruby's reflection API?
+    :answer: A collection of methods mostly defined by `Kernel`, `Object`, and `Module`
+      that allow a program to examine its own state and structure.
+    :category_name: Metaprogramming
+  - :content: Which method is called when a constant is not found?
+    :answer: "`#const_missing`"
+    :category_name: Metaprogramming
+  - :content: "`#define_method` accepts how many and of what types of arguments?"
+    :answer: A symbol as the method name and either a block or a `Method` object as
+      the method body.
+    :category_name: Metaprogramming
+  - :content: Does `#eval` accept a block?
+    :answer: No, `#eval` can only accept a string. `#class_eval` and `#instance_eval`
+      accept blocks.
+    :category_name: Metaprogramming
+  - :content: How might you obtain a reference to an eigenclass from within its associated
+      class?
+    :answer: "`eigenclass = class << self; self; end`"
+    :category_name: Metaprogramming
+  - :content: How might you change method visibility from outside a class definition?
+    :answer: Using `#class_eval`
+    :category_name: Metaprogramming
+  - :content: Why is `#eval` useful for testing code?
+    :answer: Because it doesn't alter the local scope.
+    :category_name: Metaprogramming
+  - :content: What is the difference between `#instance_eval` and `#instance_exec`?
+    :answer: "`#instance_exec` can only accept a block, and not a string, and it can
+      accept arguments and pass them to the block, allowing the block to be evaluated
+      in the context of the receiver object with parameters whose values come from the
+      block."
+    :category_name: Metaprogramming
+  - :content: Where do `#class_variable_get` and `#class_variables_set` live in the
+      object model?
+    :answer: "`Module`"
+    :category_name: Metaprogramming
+  - :content: Where do `#instance_variable_get` and `#instance_variables_set` live in
+      the object model?
+    :answer: "`Object`"
+    :category_name: Metaprogramming
+  - :content: Where do `#local_variables` and `#global` live in the object model?
+    :answer: "`Kernel`"
+    :category_name: Metaprogramming
+  - :content: What is `$LOAD_PATH`?
+    :answer: A global array of strings of the directories to be searched when loading
+      files with the load and require methods. `$LOAD_PATH` is equivalent to `$:`.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What is the difference between `#require` and `#load`?
+    :answer: "`#require` can load binary extensions. `#require` does not require a filename
+      extension. `#require` prevents multiple loads of the same file path. `#load` loads
+      the specified file at the current `$SAFE` level while `#require` loads the specified
+      file with a `$SAFE` level of 0."
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: Does a file loaded with `#require` or `#load` have access to the local
+      variables of the loading file?
+    :answer: No.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What is the difference between `#require` and `#require_relative`?
+    :answer: "`#require_relative` ignores the load path."
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What does `#autoload` do?
+    :answer: Allows lazy-loading of files when a constant assigned to a file is first
+      referenced.
+    :category_name: 'Loading Modules, Files, and Gems: Loading'
+  - :content: What does `File#expand_path` do?
+    :answer: Converts a relative path to a fully qualified path.
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: What method in `Dir` is used to list the contents of a directory?
+    :answer: "`#entries`, `#foreach`..."
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: What is an `IO` object?
+    :answer: An IO object is an instance of class IO that can be used for reading or
+      writing binary data to and from a file.
+    :category_name: 'Loading Modules, Files, and Gems: Files'
+  - :content: In Ruby 1.9+, are RubyGems installation directories included in `$LOAD_PATH`?
+    :answer: Yes.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: In Ruby 1.9+, if more than one version of a Gem is installed, which version
+      will be used?
+    :answer: The Gem with the highest version number.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: In Ruby 1.9+, how would you alter the default version of a Gem that will
+      be used?
+    :answer: Using `Kernel#gem`.
+    :category_name: 'Loading Modules, Files, and Gems: Gems'
+  - :content: What can you say about objects derived from tainted objects?
+    :answer: They will also be tainted.
+    :category_name: Security
+  - :content: What is the default `$SAFE` level?
+    :answer: '0'
+    :category_name: Security
+  - :content: What happens when you attempt to lower the `$SAFE` level?
+    :answer: You cannot lower the `$SAFE` level. It can only be raised.
+    :category_name: Security
+  - :content: What is the difference between taint and trust?
+    :answer: Taint is derived from the environment such as the command line, environment
+      variables, files, sockets, etc..., while trust is derived from the `$SAFE` level
+      of the originating code. Untrusted objects are both untrusted and tainted.
+    :category_name: Security
+  - :content: What error is raised if a method is passed the wrong number of arguments?
+    :answer: "`ArgumentError`"
+    :category_name: Exceptions
+  - :content: What error is raised if no `#method_missing` methods resolve to a method?
+    :answer: "`NoMethodError`"
+    :category_name: Exceptions
+  - :content: The superclass of `StandardError` is __.
+    :answer: "`Exception`"
+    :category_name: Exceptions
+  - :content: What does the default implementation of `Kernel#module_missing` do?
+    :answer: Just raises a `NoMethodError`.
+    :category_name: Exceptions
+  - :content: What happens if you attempt to redefine `BasicObject#__send__`?
+    :answer: Ruby issues a warning.
+    :category_name: Exceptions
+  - :content: What is the difference between `#to_s` and `#inspect`?
+    :answer: "`#inspect` is the same as `#to_s`, except for that some classes redefine
+      `#inspect` to provide output that is more helpful in debugging."
+    :category_name: Debugging
+  - :content: What is the difference between `#puts` and `#p`?
+    :answer: "`#p` converts objects to strings with the `#inspect` method instead of
+      with `#to_s`."
+    :category_name: Debugging
+  - :content: Which Ruby interpreter option enables debugging?
+    :answer: "`-d` or `--debug`"
+    :category_name: Debugging
+  - :content: What is the global variable for the last exception raised?
+    :answer: "`$ERROR_INFO` equivalent to `$!`"
+    :category_name: Debugging
+  - :content: How might you obtain the current state of the call stack?
+    :answer: Using `Exception.backtrace` or `Kernel#caller`
+    :category_name: Debugging
+  - :content: What does `Kernel#__method__` return?
+    :answer: The name as a symbol of the currently executing method.
+    :category_name: Debugging
+  - :content: In Ruby 1.9+, what is the synonym of `Kernel#__method__`?
+    :answer: "`Kernel#__callee__`"
+    :category_name: Debugging
+  - :content: What is the difference between `#puts` and `#prints`?
+    :answer: "`#puts` appends a newline to the output."
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: Where do the curly brackets to define a hash literal `{}` exist in Ruby's
+      object model?
+    :answer: It does not exist within the object model. It exists as a function of the
+      interpreter.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: In Ruby 2.0, what is the default encoding in MRI?
+    :answer: UTF-8
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What is the global constant used to access environment variable settings
+      in effect for the interpreter?
+    :answer: "`ENV`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: How does Ruby know that a setter method such as `X#[]=` will be called
+      in the expression `x = X.new; x.field = []`?
+    :answer: It is a syntactical conversion of the interpreter.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What is the global constant to access arguments specified on the command
+      line?
+    :answer: "`ARGV`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: Which Ruby interpreter option enables warning about deprecated or problematic
+      code?
+    :answer: "`-w`"
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: In MRI, which objects are not subject to garbage collection?
+    :answer: Symbols.
+    :category_name: The Ruby Environment and the Interpreter
+  - :content: What module in the standard library enables English language alternatives
+      to terse global variables?
+    :answer: "`English`"
+    :category_name: The Ruby Environment and the Interpreter
