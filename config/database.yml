@@ -1,12 +1,6 @@
 defaults: &defaults
   adapter: postgresql
-  encoding: unicode
-  pool: 5
   host: localhost
-  port: 5432
-  username: postgres
-  password: postgres
-  template: template0
 
 development:
   <<: *defaults
