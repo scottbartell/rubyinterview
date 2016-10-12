@@ -1,8 +1,7 @@
 class Question < ActiveRecord::Base
-  belongs_to :category
   before_save :render_html
 
-  validates_presence_of :category, :content, :answer
+  validates_presence_of :content, :answer, :category_name
 
   def self.random
     random_offset = rand(count)

@@ -11,27 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130423163803) do
+ActiveRecord::Schema.define(version: 20161012041430) do
 
-  create_table "categories", force: true do |t|
-    t.string   "name"
-    t.integer  "parent_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "categories", ["parent_id"], name: "index_categories_on_parent_id"
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "questions", force: true do |t|
     t.text     "content"
     t.text     "answer"
     t.text     "content_html"
     t.text     "answer_html"
-    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "category_name"
   end
-
-  add_index "questions", ["category_id"], name: "index_questions_on_category_id"
 
 end
