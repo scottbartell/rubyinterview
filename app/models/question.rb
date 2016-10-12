@@ -4,8 +4,7 @@ class Question < ActiveRecord::Base
   validates_presence_of :content, :answer, :category_name
 
   def self.random
-    random_offset = rand(count)
-    offset(random_offset).first
+    order('random()').first
   end
 
   private
