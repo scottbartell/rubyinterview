@@ -7,8 +7,8 @@ ready = ->
     quiz.addClass('slideOut')
     quiz.on "animationend webkitAnimationEnd MSAnimationEnd oAnimationEnd", (event) ->
       quiz.removeClass('flip').removeClass('slideOut')
-      quiz.find('.answer').html(data.question.answer_html)
-      quiz.find('.question').html(data.question.content_html)
+      quiz.find('.answer').html(data.answer_html)
+      quiz.find('.question').html(data.content_html)
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
